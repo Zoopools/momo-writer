@@ -1,0 +1,160 @@
+# Ontology Schema
+# Core types for agent memory and knowledge graph
+
+types:
+  # Agents & People
+  Person:
+    required: [name]
+    properties:
+      name: string
+      email: string
+      phone: string
+      notes: string
+      
+  Organization:
+    required: [name]
+    properties:
+      name: string
+      type: string
+      members: array
+      
+  # Work
+  Project:
+    required: [name]
+    properties:
+      name: string
+      status: string  # active, paused, completed, cancelled
+      goals: array
+      owner: string
+      
+  Task:
+    required: [title, status]
+    properties:
+      title: string
+      status: string  # open, in_progress, blocked, done
+      due: string
+      priority: string  # low, medium, high, urgent
+      assignee: string
+      blockers: array
+      
+  Goal:
+    required: [description]
+    properties:
+      description: string
+      target_date: string
+      metrics: array
+      
+  # Time & Place
+  Event:
+    required: [title, start]
+    properties:
+      title: string
+      start: string
+      end: string
+      location: string
+      attendees: array
+      recurrence: string
+    validate: "end >= start if end exists"
+      
+  Location:
+    required: [name]
+    properties:
+      name: string
+      address: string
+      coordinates: string
+      
+  # Information
+  Document:
+    required: [title]
+    properties:
+      title: string
+      path: string
+      url: string
+      summary: string
+      
+  Message:
+    required: [content, sender]
+    properties:
+      content: string
+      sender: string
+      recipients: array
+      thread: string
+      
+  Thread:
+    required: [subject]
+    properties:
+      subject: string
+      participants: array
+      messages: array
+      
+  Note:
+    required: [content]
+    properties:
+      content: string
+      tags: array
+      refs: array
+      
+  # Resources
+  Account:
+    required: [service]
+    properties:
+      service: string
+      username: string
+      credential_ref: string
+      
+  Device:
+    required: [name]
+    properties:
+      name: string
+      type: string
+      identifiers: array
+      
+  Credential:
+    required: [service, secret_ref]
+    forbidden_properties: [password, secret, token]
+    
+  # Meta
+  Action:
+    required: [type]
+    properties:
+      type: string
+      target: string
+      timestamp: string
+      outcome: string
+      
+  Policy:
+    required: [scope, rule]
+    properties:
+      scope: string
+      rule: string
+      enforcement: string
+
+relations:
+  has_owner:
+    from_types: [Project, Task]
+    to_types: [Person]
+    cardinality: many_to_one
+    
+  has_task:
+    from_types: [Project]
+    to_types: [Task]
+    cardinality: one_to_many
+    
+  blocks:
+    from_types: [Task]
+    to_types: [Task]
+    acyclic: true
+    
+  assigned_to:
+    from_types: [Task]
+    to_types: [Person]
+    cardinality: many_to_one
+    
+  part_of:
+    from_types: [Task, Note, Document]
+    to_types: [Project]
+    
+  related_to:
+    from_types: [Any]
+    to_types: [Any]
+    cardinality: many_to_many

@@ -1,0 +1,8 @@
+{
+  "ontology_migration": {
+    "last_reminder": null,
+    "interval_days": 2,
+    "status": "pending",
+    "notes": "User wants to migrate existing memory to structured ontology graph every 1-2 days"
+  }
+}

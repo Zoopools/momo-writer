@@ -1,0 +1,13 @@
+# 本地记忆（不同步）
+memory/2026-*.md
+memory/sync.md
+memory/archive/
+*.cache
+*.lock
+.DS_Store
+
+# 核心记忆（同步）
+!SOUL.md
+!MEMORY.md
+!knowledge/
+!pool/

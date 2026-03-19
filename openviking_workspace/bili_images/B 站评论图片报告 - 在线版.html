@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B 站评论图片抓取 - BV15QAUzXEtP</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        }
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .user-name { font-size: 1.3em; font-weight: 600; }
+        .comment-index {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .card-body { padding: 25px; }
+        .comment-text {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .image-container { text-align: center; }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover { transform: scale(1.02); }
+        .image-info {
+            margin-top: 10px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 40px;
+            padding: 20px;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            background: rgba(255,255,255,0.2);
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .stat-number { font-size: 2em; font-weight: bold; color: white; }
+        .stat-label { color: rgba(255,255,255,0.9); font-size: 0.9em; }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: transform 0.2s ease;
+        }
+        .btn:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 B 站评论图片抓取</h1>
+        <p class="subtitle">BV 号：BV15QAUzXEtP | 生化危机 9 Crash 崩溃报错</p>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">7</div>
+                <div class="stat-label">条评论</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">7</div>
+                <div class="stat-label">张图片</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">原图画质</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="user-name">@鲍比烤迪克</span>
+                <span class="comment-index">评论 #1</span>
+            </div>
+            <div class="card-body">
+                <div class="comment-text">
+                    有没有大佬帮忙翻译翻译是因为啥 [笑哭]
+                </div>
+                <div class="image-container">
+                    <img src="https://i0.hdslb.com/bfs/new_dyn/e307257281cc97cb9a43ce67b209e23a603268895.jpg" alt="鲍比烤迪克 的评论图片" onclick="window.open('https://i0.hdslb.com/bfs/new_dyn/e307257281cc97cb9a43ce67b209e23a603268895.jpg')">
+                    <div class="image-info">
+                        🔗 <a href="https://i0.hdslb.com/bfs/new_dyn/e307257281cc97cb9a43ce67b209e23a603268895.jpg" target="_blank" class="btn">查看原图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="user-name">@队友脚下火</span>
+                <span class="comment-index">评论 #2</span>
+            </div>
+            <div class="card-body">
+                <div class="comment-text">
+                    之前可以正常玩，昨天突然出现这样的报错
+                </div>
+                <div class="image-container">
+                    <img src="https://i0.hdslb.com/bfs/new_dyn/3da0984bb0a1744a77510231bbe215e4518548367.jpg" alt="队友脚下火 的评论图片" onclick="window.open('https://i0.hdslb.com/bfs/new_dyn/3da0984bb0a1744a77510231bbe215e4518548367.jpg')">
+                    <div class="image-info">
+                        🔗 <a href="https://i0.hdslb.com/bfs/new_dyn/3da0984bb0a1744a77510231bbe215e4518548367.jpg" target="_blank" class="btn">查看原图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="user-name">@參悟自由的意義</span>
+                <span class="comment-index">评论 #3</span>
+            </div>
+            <div class="card-body">
+                <div class="comment-text">
+                    嘗試，還是這樣
+                </div>
+                <div class="image-container">
+                    <img src="https://i0.hdslb.com/bfs/new_dyn/d63b678c314176e678d6fb6c8a18156814110469.jpg" alt="參悟自由的意義 的评论图片" onclick="window.open('https://i0.hdslb.com/bfs/new_dyn/d63b678c314176e678d6fb6c8a18156814110469.jpg')">
+                    <div class="image-info">
+                        🔗 <a href="https://i0.hdslb.com/bfs/new_dyn/d63b678c314176e678d6fb6c8a18156814110469.jpg" target="_blank" class="btn">查看原图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="user-name">@起语风</span>
+                <span class="comment-index">评论 #4</span>
+            </div>
+            <div class="card-body">
+                <div class="comment-text">
+                    有没有大佬知道这个怎么解决
+                </div>
+                <div class="image-container">
+                    <img src="https://i0.hdslb.com/bfs/new_dyn/8dbd37793a7a714ab1a3d3abcd7798d9358323258.png" alt="起语风 的评论图片" onclick="window.open('https://i0.hdslb.com/bfs/new_dyn/8dbd37793a7a714ab1a3d3abcd7798d9358323258.png')">
+                    <div class="image-info">
+                        🔗 <a href="https://i0.hdslb.com/bfs/new_dyn/8dbd37793a7a714ab1a3d3abcd7798d9358323258.png" target="_blank" class="btn">查看原图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="user-name">@赤瞳的夜刃</span>
+                <span class="comment-index">评论 #5</span>
+            </div>
+            <div class="card-body">
+                <div class="comment-text">
+                    这又是什么问题报错，在线等很急
+                </div>
+                <div class="image-container">
+                    <img src="https://i0.hdslb.com/bfs/new_dyn/54bfa81769c32f2591c9a86177e4067a302272043.jpg" alt="赤瞳的夜刃 的评论图片" onclick="window.open('https://i0.hdslb.com/bfs/new_dyn/54bfa81769c32f2591c9a86177e4067a302272043.jpg')">
+                    <div class="image-info">
+                        🔗 <a href="https://i0.hdslb.com/bfs/new_dyn/54bfa81769c32f2591c9a86177e4067a302272043.jpg" target="_blank" class="btn">查看原图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="user-name">@阿拉斯苒</span>
+                <span class="comment-index">评论 #6</span>
+            </div>
+            <div class="card-body">
+                <div class="comment-text">
+                    这个是什么情况
+                </div>
+                <div class="image-container">
+                    <img src="https://i0.hdslb.com/bfs/new_dyn/73c2c27e1c9737325ca53a19af83d0e314681573.jpg" alt="阿拉斯苒 的评论图片" onclick="window.open('https://i0.hdslb.com/bfs/new_dyn/73c2c27e1c9737325ca53a19af83d0e314681573.jpg')">
+                    <div class="image-info">
+                        🔗 <a href="https://i0.hdslb.com/bfs/new_dyn/73c2c27e1c9737325ca53a19af83d0e314681573.jpg" target="_blank" class="btn">查看原图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="user-name">@Mad-Monk</span>
+                <span class="comment-index">评论 #7</span>
+            </div>
+            <div class="card-body">
+                <div class="comment-text">
+                    按照 up 的指南从头到尾试了一遍，依然如此，游戏时长 50 分钟，满满的解密环节，可能跟我用的是网吧的电脑
+                </div>
+                <div class="image-container">
+                    <img src="https://i0.hdslb.com/bfs/new_dyn/e73288fb9697e7f6e8d863b8fc33931b554905270.png" alt="Mad-Monk 的评论图片" onclick="window.open('https://i0.hdslb.com/bfs/new_dyn/e73288fb9697e7f6e8d863b8fc33931b554905270.png')">
+                    <div class="image-info">
+                        🔗 <a href="https://i0.hdslb.com/bfs/new_dyn/e73288fb9697e7f6e8d863b8fc33931b554905270.png" target="_blank" class="btn">查看原图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🏹 小猎 · 信息捕手 | 生成时间：2026-03-13 09:39:02</p>
+            <p>💡 点击图片可以全屏查看 | 数据来源于 B 站评论区</p>
+            <p style="margin-top:15px;font-size:0.85em;opacity:0.7;">
+                📥 <a href="https://github.com/your-username/bili-comments" style="color:white;">获取源码</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

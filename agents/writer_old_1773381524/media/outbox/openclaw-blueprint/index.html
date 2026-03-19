@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 零基础入门路线图</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .canvas-container {
+            width: 1080px;
+            background: linear-gradient(135deg, #2d3436 0%, #1a1a2e 100%);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <div class="canvas-container">
+        <canvas id="blueprint" width="1080" height="1920"></canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById('blueprint');
+        const ctx = canvas.getContext('2d');
+        const w = canvas.width;
+        const h = canvas.height;
+
+        // 配色方案
+        const colors = {
+            bg: '#1a1a2e',
+            bg2: '#2d3436',
+            grid: '#3d3d5c',
+            text: '#ffffff',
+            textMuted: '#a0a0a0',
+            accent1: '#ff6b6b', // 粉色警示
+            accent2: '#ffd93d', // 黄色高亮
+            accent3: '#6bcb77', // 绿色成功
+            accent4: '#4d96ff', // 蓝色信息
+            border: '#4a4a6a'
+        };
+
+        // 绘制背景网格
+        function drawGrid() {
+            ctx.strokeStyle = colors.grid;
+            ctx.lineWidth = 0.5;
+            // 垂直线
+            for (let x = 0; x <= w; x += 40) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, h);
+                ctx.stroke();
+            }
+            // 水平线
+            for (let y = 0; y <= h; y += 40) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(w, y);
+                ctx.stroke();
+            }
+        }
+
+        // 绘制标尺装饰
+        function drawRuler() {
+            ctx.fillStyle = colors.border;
+            // 顶部标尺
+            for (let x = 0; x <= w; x += 20) {
+                ctx.fillRect(x, 0, 1, 10);
+            }
+            // 左侧标尺
+            for (let y = 0; y <= h; y += 20) {
+                ctx.fillRect(0, y, 10, 1);
+            }
+        }
+
+        // 绘制模块框
+        function drawModule(x, y, width, height, title, content, color) {
+            // 背景
+            ctx.fillStyle = 'rgba(45, 52, 54, 0.8)';
+            ctx.fillRect(x, y, width, height);
+            
+            // 边框
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 2;
+            ctx.strokeRect(x, y, width, height);
+            
+            // 角标装饰
+            ctx.fillStyle = color;
+            ctx.fillRect(x - 5, y - 5, 10, 10);
+            ctx.fillRect(x + width - 5, y - 5, 10, 10);
+            ctx.fillRect(x - 5, y + height - 5, 10, 10);
+            ctx.fillRect(x + width - 5, y + height - 5, 10, 10);
+            
+            // 标题
+            ctx.fillStyle = color;
+            ctx.font = 'bold 18px Courier New';
+            ctx.fillText(title, x + 15, y + 30);
+            
+            // 内容
+            ctx.fillStyle = colors.text;
+            ctx.font = '14px Courier New';
+            let textY = y + 55;
+            content.forEach(line => {
+                ctx.fillText(line, x + 20, textY);
+                textY += 22;
+            });
+        }
+
+        // 绘制标题
+        function drawTitle() {
+            // 主标题背景
+            ctx.fillStyle = 'rgba(77, 150, 255, 0.2)';
+            ctx.fillRect(0, 0, w, 120);
+            
+            // 标题文字
+            ctx.fillStyle = colors.accent4;
+            ctx.font = 'bold 36px Courier New';
+            ctx.fillText('🦞 OpenClaw 零基础入门路线图', 40, 50);
+            
+            ctx.fillStyle = colors.textMuted;
+            ctx.font = '16px Courier New';
+            ctx.fillText('2026 年最新详细使用指南', 40, 80);
+            
+            // 装饰线
+            ctx.strokeStyle = colors.accent4;
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(40, 95);
+            ctx.lineTo(w - 40, 95);
+            ctx.stroke();
+        }
+
+        // 绘制
+        drawGrid();
+        drawRuler();
+        drawTitle();
+
+        // 模块 A-01: 使用前准备
+        drawModule(40, 140, 470, 280, 'A-01 | 使用前准备', [
+            '1️⃣ 运行环境',
+            '   · 电脑：Win 10+/macOS 10.15+/Linux',
+            '   · 或云服务器',
+            '',
+            '2️⃣ AI 模型（大脑）',
+            '   · 国内：MiniMax/Kimi/智谱 AI',
+            '   · 国际：Claude/GPT-4',
+            '',
+            '3️⃣ 通讯渠道（麦克风）',
+            '   · 飞书/Telegram/WhatsApp/Discord'
+        ], colors.accent4);
+
+        // 模块 B-05: 部署方案
+        drawModule(530, 140, 510, 280, 'B-05 | 部署方案', [
+            '📦 方案一：桌面一键安装',
+            '   · 适合：零代码基础新手',
+            '   · 优点：下载即用，零成本',
+            '',
+            '☁️ 方案二：云端托管服务',
+            '   · 适合：不想维护服务器',
+            '   · 成本：约 199 元/月',
+            '',
+            '🖥️ 方案三：云服务器部署',
+            '   · 适合：开发者/技术爱好者',
+            '   · 成本：约 2 美元/月起'
+        ], colors.accent2);
+
+        // 模块 C-12: 桌面安装步骤
+        drawModule(40, 440, 470, 240, 'C-12 | 桌面一键安装', [
+            '1. 下载客户端',
+            '   → OneClaw 官网下载 .dmg/.exe',
+            '',
+            '2. 安装并运行',
+            '   → 双击安装包完成安装',
+            '',
+            '3. 配置 API Key',
+            '   → 选择大模型并粘贴 Key',
+            '',
+            '4. 连接通讯工具',
+            '   → 绑定飞书或 Telegram'
+        ], colors.accent3);
+
+        // 模块 D-08: 核心配置
+        drawModule(530, 440, 510, 240, 'D-08 | 核心配置', [
+            '🎯 身份录入（永久记忆）',
+            '   "我是 [职业]，需要帮我 [任务]"',
+            '   "习惯简洁回复，每天 9 点汇报"',
+            '',
+            '🔧 安装技能',
+            '   · Capability Evolver',
+            '   · Agent Browser',
+            '   · Summarize / Find Skills',
+            '',
+            '📱 对接工作渠道',
+            '   → 飞书企业自建应用'
+        ], colors.accent1);
+
+        // 模块 E-03: 使用示例
+        drawModule(40, 700, 1000, 200, 'E-03 | 使用指令示例', [
+            '📧 办公自动化',
+            '   "把邮箱里来自客户的未读邮件，摘要整理成表格发到飞书群"',
+            '',
+            '📊 信息处理',
+            '   "监控竞品官网和社交媒体，每天下午 5 点给我动态摘要"',
+            '',
+            '✍️ 内容创作',
+            '   "根据会议纪要生成公众号推文大纲，风格活泼"',
+            '',
+            '⏰ 定时任务',
+            '   "每周一早上 9 点提醒我更新项目周报"'
+        ], colors.accent4);
+
+        // 模块 F-15: 进阶玩法
+        drawModule(40, 920, 470, 220, 'F-15 | 进阶玩法', [
+            '🔄 自动化工作流',
+            '   · 结合 n8n 等工具',
+            '   · 自动处理重复流程',
+            '',
+            '🤖 多智能体协作',
+            '   · 创建多个不同专长的龙虾',
+            '   · 调研 + 写作 + 发布协同',
+            '',
+            '💼 商业应用',
+            '   · 提供部署配置服务',
+            '   · 量化交易/社群运营'
+        ], colors.accent2);
+
+        // 模块 G-20: 注意事项
+        drawModule(530, 920, 510, 220, 'G-20 | 注意事项', [
+            '⚠️ 安全第一',
+            '   · 可控环境中使用',
+            '   · 设置操作权限白名单',
+            '   · 推荐 Docker 沙箱模式',
+            '',
+            '💰 控制成本',
+            '   · 设置用量监控',
+            '   · 或选用固定订阅制',
+            '',
+            '🎯 从简开始',
+            '   · 从一个核心需求开始',
+            '   · 逐步磨合和扩展'
+        ], colors.accent1);
+
+        // 底部总结
+        ctx.fillStyle = 'rgba(107, 203, 119, 0.2)';
+        ctx.fillRect(40, 1160, 1000, 180);
+        ctx.strokeStyle = colors.accent3;
+        ctx.lineWidth = 3;
+        ctx.strokeRect(40, 1160, 1000, 180);
+
+        ctx.fillStyle = colors.accent3;
+        ctx.font = 'bold 24px Courier New';
+        ctx.fillText('🚀 开始"养龙虾"吧！', 540, 1200);
+
+        ctx.fillStyle = colors.text;
+        ctx.font = '16px Courier New';
+        const summary = [
+            '选择适合你的方案快速启动',
+            '通过清晰的"身份设定"和必要的"技能装备"来训练它',
+            '你就能获得一个 7×24 小时在线的专属数字员工',
+            '真正将 AI 能力转化为生产力！'
+        ];
+        let y = 1230;
+        summary.forEach(line => {
+            ctx.fillText(line, 60, y);
+            y += 28;
+        });
+
+        // 装饰元素 - 坐标轴
+        ctx.strokeStyle = colors.border;
+        ctx.lineWidth = 2;
+        // X 轴
+        ctx.beginPath();
+        ctx.moveTo(0, h - 30);
+        ctx.lineTo(w, h - 30);
+        ctx.stroke();
+        // Y 轴
+        ctx.beginPath();
+        ctx.moveTo(30, 0);
+        ctx.lineTo(30, h);
+        ctx.stroke();
+
+        // 底部信息
+        ctx.fillStyle = colors.textMuted;
+        ctx.font = '12px Courier New';
+        ctx.fillText('制作：小媒 (Xiǎo Méi) | 新媒体增长专家', 40, h - 10);
+        ctx.fillText('风格：工程蓝图 | 2026-03-07', w - 300, h - 10);
+
+        // 条形码装饰
+        for (let i = 0; i < 50; i++) {
+            const barWidth = Math.random() > 0.5 ? 2 : 4;
+            ctx.fillStyle = colors.textMuted;
+            ctx.fillRect(w - 150 + (i * 3), h - 25, barWidth, 15);
+        }
+    </script>
+</body>
+</html>

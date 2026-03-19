@@ -1,0 +1,7 @@
+{
+  "platform": "bjh-work",
+  "status": "发布失败",
+  "url": "",
+  "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://baijiahao.baidu.com/builder/rc/edit?type=news\", waiting until \"networkidle\"\u001b[22m\n",
+  "timestamp": "2026/3/17 20:59:19"
+}

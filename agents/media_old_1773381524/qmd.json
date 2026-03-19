@@ -1,0 +1,10 @@
+{
+  "collections": {
+    "memory": {
+      "paths": [
+        "memory/*.md",
+        "MEMORY.md"
+      ]
+    }
+  }
+}

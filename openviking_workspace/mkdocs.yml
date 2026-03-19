@@ -1,0 +1,96 @@
+# MkDocs 配置
+site_name: OmniPresence Knowledge
+site_url: https://zoopools.github.io/omni-knowledge
+site_author: OmniPresence Agent Matrix
+site_description: OmniPresence Agent Matrix 知识库 - 双端同步的 AI 进化系统
+
+# 主题
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - scheme: slate
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+# 插件
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: datetime
+      enable_creation_date: true
+
+# 扩展
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# 导航
+nav:
+  - 首页: index.md
+  - Gene:
+    - Gene/index.md
+    - 全局 Gene:
+      - gene_global_001.md
+      - gene_global_002.md
+      - gene_global_003.md
+      - gene_global_004.md
+      - gene_global_005.md
+      - gene_global_006.md
+      - gene_global_007.md
+      - gene_global_008.md
+    - 专属 Gene:
+      - gene_media_001.md
+    - 共享 Gene:
+      - gene_shared_001.md
+  - 架构:
+    - OmniPresence Matrix: 架构/OmniPresence.md
+    - 同步机制: 架构/同步机制.md
+    - 密钥管理: 架构/密钥管理.md
+  - 工具:
+    - Agent-Reach: 工具/Agent-Reach.md
+    - chrome-cdp: 工具/chrome-cdp.md
+    - x-tweet-fetcher: 工具/x-tweet-fetcher.md
+  - 教程:
+    - 快速开始: 教程/快速开始.md
+    - 双端同步: 教程/双端同步.md
+
+# 版权
+copyright: Copyright &copy; 2026 OmniPresence Agent Matrix
+
+# 额外配置
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Zoopools/momo-writer
+  generator: false

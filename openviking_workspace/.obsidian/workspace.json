@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "6c10fef06d9241e0",
+    "type": "split",
+    "children": [
+      {
+        "id": "9f0528123b6facb4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "df87aa3b58ff9b69",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/03-小猎专区/数据采集手册.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "数据采集手册"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9879ce37246d5f91",
+    "type": "split",
+    "children": [
+      {
+        "id": "a58fd0768dd3b8b7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8479fb483f080397",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "80a34bb4fc525222",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "166bfac980d51e74",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "01cef74125448cb3",
+    "type": "split",
+    "children": [
+      {
+        "id": "409e3d6336439fdd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a04020fcd8ce5973",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/00-核心架构/基地准则.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "基地准则 的反向链接列表"
+            }
+          },
+          {
+            "id": "8c64fcfa0c0394f0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/00-核心架构/基地准则.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "基地准则 的出链列表"
+            }
+          },
+          {
+            "id": "e3bdf10f90380a21",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "e8b1adf1550ecd15",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "32f8625af5bb10d8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/00-核心架构/基地准则.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "基地准则 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "8479fb483f080397",
+  "lastOpenFiles": [
+    "backups/agents_memory/writer/sessions/e206582a-9362-4715-9e0d-fc638ebf1366.jsonl.deleted.2026-03-17T19-04-55.723Z",
+    "backups/agents_memory/writer/sessions/5650d2a2-6fe5-446b-86aa-5ff219a4f9f9.jsonl.reset.2026-03-16T22-30-00.026Z",
+    "backups/agents_memory/writer/sessions/2a1aa554-e5f9-4b79-b107-42cf2f6399e8.jsonl.reset.2026-03-17T22-30-00.026Z",
+    "backups/agents_memory/media/sessions/693c68a3-42bd-4271-9485-b256bc8367e1.jsonl.reset.2026-03-16T22-22-34.074Z",
+    "backups/agents_memory/hunter/sessions/d295dbbc-0886-4472-ba5f-bee500b4f0c7.jsonl.reset.2026-03-18T00-36-35.399Z",
+    "backups/agents_memory/hunter/sessions/ad7f0b7f-112a-43c3-bb50-6d0ef1443df0.jsonl.reset.2026-03-17T00-58-11.920Z",
+    "docs/02-小媒专区/素材库/游戏自制视频专栏/README.md",
+    "skills/agent-reach/SKILL.md",
+    "skills/agent-reach",
+    "publish-geo/scripts/publish-debug.js",
+    "publish-geo/logs/ultimate-final-1773757376793.png",
+    "publish-geo/logs/ultimate-final-1773757221671.png",
+    "publish-geo/logs/ultimate-final-1773757106126.png",
+    "publish-geo/logs/ultimate-final-1773756900519.png",
+    "publish-geo/assets/cover.jpg",
+    "publish-geo/assets",
+    "publish-geo/logs/ultimate-final-1773756699781.png",
+    "publish-geo/scripts/publish-ultimate.js",
+    "publish-geo/logs/final-check-error-1773756342659.png",
+    "publish-geo/scripts/publish-final.js",
+    "publish-geo/logs/auto-final-1773756086896.png",
+    "publish-geo/logs/debug-cover-fail-1773756080282.png",
+    "publish-geo/logs/debug-error-1773755248707.png",
+    "publish-geo/articles/test-publish.md",
+    "publish-geo/README.md",
+    "publish-geo/articles/test-geo.md",
+    "publish-geo/node_modules/playwright/lib/agents/playwright-test-planner.agent.md",
+    "publish-geo/node_modules/playwright/lib/agents/playwright-test-plan.prompt.md",
+    "publish-geo/node_modules/playwright/lib/agents/playwright-test-healer.agent.md",
+    "publish-geo/node_modules/playwright/lib/agents/playwright-test-heal.prompt.md",
+    "publish-geo/node_modules/playwright/lib/agents/playwright-test-generator.agent.md",
+    "publish-geo/node_modules/playwright/lib/agents/playwright-test-generate.prompt.md",
+    "publish-geo/node_modules/playwright/lib/agents/playwright-test-coverage.prompt.md",
+    "publish-geo/node_modules/playwright-core/README.md",
+    "publish-geo/node_modules/playwright/README.md",
+    "docs/02-小媒专区/素材库/游戏自制视频专栏/环境修复/README.md",
+    "docs/00-核心架构/基地准则.md",
+    "docs/00-核心架构/进化引擎/Gene/gene_global_001.md",
+    "docs/02-小媒专区/README.md",
+    "docs/02-小媒专区/新媒体发布规范.md",
+    "docs/README.md",
+    "conflict-files-obsidian-git.md",
+    "docs/02-小媒专区/素材库/游戏自制视频专栏/异常优化/README.md",
+    "docs/02-小媒专区/素材库/游戏自制视频专栏/教程/README.md",
+    "docs/02-小媒专区/素材库/游戏自制视频专栏/资讯工具/README.md",
+    "docs/02-小媒专区/内容创作指南.md"
+  ]
+}

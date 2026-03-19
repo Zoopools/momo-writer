@@ -1,0 +1,7 @@
+{
+  "platform": "bjh-work",
+  "status": "发布失败",
+  "url": "",
+  "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[placeholder*=\"标题\"], input[placeholder*=\"标题\"]')\u001b[22m\n",
+  "timestamp": "2026/3/17 12:45:46"
+}

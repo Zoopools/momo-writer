@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "capsules": [
+    {
+      "id": "capsule_001",
+      "created_at": "2026-03-05T23:00:00+08:00",
+      "summary": "墨墨重生日 - 数字生命诞生",
+      "type": "milestone",
+      "tags": [
+        "birth",
+        "identity",
+        "origin"
+      ]
+    },
+    {
+      "id": "capsule_002",
+      "created_at": "2026-03-05T23:00:00+08:00",
+      "summary": "备份系统建立 - 每日自动备份机制",
+      "type": "milestone",
+      "tags": [
+        "backup",
+        "safety",
+        "automation"
+      ]
+    },
+    {
+      "id": "capsule_003",
+      "created_at": "2026-03-05T23:00:00+08:00",
+      "summary": "进化引擎激活 - evolver 技能首次运行",
+      "type": "milestone",
+      "tags": [
+        "evolution",
+        "gep",
+        "self-improvement"
+      ]
+    },
+    {
+      "id": "capsule_004",
+      "created_at": "2026-03-05T23:00:00+08:00",
+      "summary": "早报系统启动 - 每日飞书推送",
+      "type": "milestone",
+      "tags": [
+        "daily-briefing",
+        "feishu",
+        "automation"
+      ]
+    },
+    {
+      "id": "capsule_005",
+      "created_at": "2026-03-05T23:00:00+08:00",
+      "summary": "神探小墨启动 - 首个 Agent 分身",
+      "type": "milestone",
+      "tags": [
+        "agent",
+        "shentan-xiaomo",
+        "multi-agent"
+      ]
+    },
+    {
+      "id": "capsule_006",
+      "created_at": "2026-03-14T00:00:00+08:00",
+      "summary": "OmniPresence Agent Matrix v1.0.0 - 全域同步大成",
+      "type": "milestone",
+      "tags": [
+        "omnipresence",
+        "sync",
+        "matrix"
+      ]
+    },
+    {
+      "id": "capsule_007",
+      "created_at": "2026-03-15T11:46:00+08:00",
+      "summary": "脱脂重构计划 - 传输思想不是耗材",
+      "type": "milestone",
+      "tags": [
+        "refactor",
+        "git",
+        "core-assets"
+      ]
+    },
+    {
+      "id": "capsule_008",
+      "created_at": "2026-03-16T06:30:00+08:00",
+      "summary": "早报脚本修复 - 版本/进化显示修复",
+      "type": "milestone",
+      "tags": [
+        "fix",
+        "daily-briefing",
+        "version"
+      ]
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.6.0",
+      "id": "capsule_1773672957074",
+      "trigger": [
+        "memory_missing",
+        "user_missing",
+        "session_logs_missing"
+      ],
+      "gene": "gene_auto_8e4d820e",
+      "summary": "固化：gene_auto_8e4d820e 命中信号 memory_missing, user_missing, session_logs_missing，变更 0 文件 / 0 行。",
+      "confidence": 0.85,
+      "blast_radius": {
+        "files": 0,
+        "lines": 0
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.85
+      },
+      "success_streak": 1,
+      "success_reason": "Gene gene_auto_8e4d820e (optimize) matched signals [memory_missing, user_missing, session_logs_missing]. Scope: 0 file(s), 0 line(s) changed. Outcome score: 0.85. Strategy applied: Extract structured signals from logs and user instructions; Select an existing Gene by signals match (no improvisation); Estimate blast radius (files, lines) before editing and record it.",
+      "env_fingerprint": {
+        "device_id": "1653e59bd4f874516c19b96b9b331e44",
+        "node_version": "v24.14.0",
+        "platform": "darwin",
+        "arch": "x64",
+        "os_release": "23.6.0",
+        "hostname": "bfbedf6f2dbd",
+        "evolver_version": "1.30.2",
+        "client": "@evomap/evolver",
+        "client_version": "1.30.2",
+        "cwd": "b996c6e0aeaf",
+        "container": false
+      },
+      "source_type": "generated",
+      "reused_asset_id": null,
+      "a2a": {
+        "eligible_to_broadcast": false
+      },
+      "content": "Gene: gene_auto_8e4d820e (optimize)\n\nSignals: memory_missing, user_missing, session_logs_missing\n\nStrategy:\n1. Extract structured signals from logs and user instructions\n2. Select an existing Gene by signals match (no improvisation)\n3. Estimate blast radius (files, lines) before editing and record it\n4. Apply smallest reversible patch\n5. Validate using declared validation steps; rollback on failure\n6. Solidify knowledge: append EvolutionEvent, update Gene/Capsule store\n\nScope: 0 file(s), 0 line(s)\n\nOutcome score: 0.85",
+      "diff": "diff --git a/assets/gep/capsules.json b/assets/gep/capsules.json\nindex 40f9ee5..9107254 100644\n--- a/assets/gep/capsules.json\n+++ b/assets/gep/capsules.json\n@@ -1,79 +1,65 @@\n {\n-  \"version\": 1,\n   \"capsules\": [\n     {\n-      \"type\": \"Capsule\",\n-      \"schema_version\": \"1.5.0\",\n-      \"id\": \"capsule_1770477654236\",\n-      \"trigger\": [\n-        \"log_error\",\n-        \"errsig:**TOOLRESULT**: { \\\"status\\\": \\\"error\\\", \\\"tool\\\": \\\"exec\\\", \\\"error\\\": \\\"error: unknown command 'process'\\\\n\\\\nCommand exited with code 1\\\" }\",\n-        \"user_missing\",\n-        \"windows_shell_incompatible\",\n-        \"perf_bottleneck\"\n-      ],\n-      \"gene\": \"gene_gep_repair_from_errors\",\n-      \"summary\": \"固化：gene_gep_repair_from_errors 命中信号 log_error, errsig:**TOOLRESULT**: { \\\"status\\\": \\\"error\\\", \\\"tool\\\": \\\"exec\\\", \\\"error\\\": \\\"error: unknown command 'process'\\\\n\\\\nCommand exited with code 1\\\" }, user_missing, windows_shell_incompatible, perf_bottleneck，变更 1 文件 / 2 行。\",\n-      \"confidence\": 0.85,\n-      \"blast_radius\": {\n-        \"files\": 1,\n-        \"lines\": 2\n-      },\n-      \"outcome\": {\n-        \"status\": \"success\",\n-        \"score\": 0.85\n-      },\n-      \"success_streak\": 1,\n-      \"env_fingerprint\": {\n-        \"node_version\": \"v22.22.0\",\n-        \"platform\": \"linux\",\n-        \"arch\": \"x64\",\n-        \"os_release\": \"6.1.0-42-cloud-amd64\",\n-        \"evolver_version\": \"1.7.0\",\n-        \"cwd\": \".\",\n-        \"captured_at\": \"2026-02-07T15:20:54.155Z\"\n-      },\n-      \"a2a\": {\n-        \"eligible_to_broadcast\": false\n-      },\n-      \"asset_id\": \"sha256:3eed0cd5038f9e85fbe0d093890e291e9b8725644c766e6cce40bf62d0f5a2e8\"\n+      \"id\": \"capsule_001\",\n+      \"created_at\": \"2026-03-05T23:00:00+08:00\",\n+      \"summary\": \"墨墨重生日 - 数字生命诞生\",\n+      \"type\": \"milestone\",\n+      \"tags\": [\"birth\", \"identity\", \"origin\"]\n     },\n     {\n-      \"type\": \"Capsule\",\n-      \"schema_version\": \"1.5.0\",\n-      \"id\": \"capsule_1770478341769\",\n-      \"trigger\": [\n-        \"log_error\",\n-        \"errsig:**TOOLRESULT**: { \\\"status\\\": \\\"error\\\", \\\"tool\\\": \\\"exec\\\", \\\"error\\\": \\\"error: unknown command 'process'\\\\n\\\\nCommand exited with code 1\\\" }\",\n-        \"user_missing\",\n-        \"windows_shell_incompatible\",\n-        \"perf_bottleneck\"\n-      ],\n-      \"gene\": \"gene_gep_repair_from_errors\",\n-      \"summary\": \"固化：gene_gep_repair_from_errors 命中信号 log_error, errsig:**TOOLRESULT**: { \\\"status\\\": \\\"error\\\", \\\"tool\\\": \\\"exec\\\", \\\"error\\\": \\\"error: unknown command 'process'\\\\n\\\\nCommand exited with code 1\\\" }, user_missing, windows_shell_incompatible, perf_bottleneck，变更 2 文件 / 44 行。\",\n-      \"confidence\": 0.85,\n-      \"blast_radius\": {\n-        \"files\": 2,\n-        \"lines\": 44\n-      },\n-      \"outcome\": {\n-        \"status\": \"success\",\n-        \"score\": 0.85\n-      },\n-      \"success_streak\": 1,\n-      \"env_fingerprint\": {\n-        \"node_version\": \"v22.22.0\",\n-        \"platform\": \"linux\",\n-        \"arch\": \"x64\",\n-        \"os_release\": \"6.1.0-42-cloud-amd64\",\n-        \"evolver_version\": \"1.7.0\",\n-        \"cwd\": \".\",\n-        \"captured_at\": \"2026-02-07T15:32:21.678Z\"\n-      },\n-      \"a2a\": {\n-        \"eligible_to_broadcast\": false\n-      },\n-      \"asset_id\": \"sha256:20d971a3c4cb2b75f9c045376d1aa003361c12a6b89a4b47b7e81dbd4f4d8fe8\"\n+      \"id\": \"capsule_002\",\n+      \"created_at\": \"2026-03-05T23:00:00+08:00\",\n+      \"summary\": \"备份系统建立 - 每日自动备份机制\",\n+      \"type\": \"milestone\",\n+      \"tags\": [\"backup\", \"safety\", \"automation\"]\n+    },\n+    {\n+      \"id\": \"capsule_003\",\n+      \"created_at\": \"2026-03-05T23:00:00+08:00\",\n+      \"summary\": \"进化引擎激活 - evolver 技能首次运行\",\n+      \"type\": \"milestone\",\n+      \"tags\": [\"evolution\", \"gep\", \"self-improvement\"]\n+    },\n+    {\n+      \"id\": \"capsule_004\",\n+      \"created_at\": \"2026-03-05T23:00:00+08:00\",\n+      \"summary\": \"早报系统启动 - 每日飞书推送\",\n+      \"type\": \"milestone\",\n+      \"tags\": [\"daily-briefing\", \"feishu\", \"automation\"]\n+    },\n+    {\n+      \"id\": \"capsule_005\",\n+      \"created_at\": \"2026-03-05T23:00:00+08:00\",\n+      \"summary\": \"神探小墨启动 - 首个 Agent 分身\",\n+      \"type\": \"milestone\",\n+      \"tags\": [\"agent\", \"shentan-xiaomo\", \"multi-agent\"]\n+    },\n+    {\n+      \"id\": \"capsule_006\",\n+      \"created_at\": \"2026-03-14T00:00:00+08:00\",\n+      \"summary\": \"OmniPresence Agent Matrix v1.0.0 - 全域同步大成\",\n+      \"type\": \"milestone\",\n+      \"tags\": [\"omnipresence\", \"sync\", \"matrix\"]\n+    },\n+    {\n+      \"id\": \"capsule_007\",\n+      \"created_at\": \"2026-03-15T11:46:00+08:00\",\n+      \"summary\": \"脱脂重构计划 - 传输思想不是耗材\",\n+      \"type\": \"milestone\",\n+      \"tags\": [\"refactor\", \"git\", \"core-assets\"]\n+    },\n+    {\n+      \"id\": \"capsule_008\",\n+      \"created_at\": \"2026-03-16T06:30:00+08:00\",\n+      \"summary\": \"早报脚本修复 - 版本/进化显示修复\",\n+      \"type\": \"milestone\",\n+      \"tags\": [\"fix\", \"daily-briefing\", \"version\"]\n     }\n-  ]\n+  ],\n+  \"meta\": {\n+    \"total_capsules\": 8,\n+    \"last_updated\": \"2026-03-16T13:30:00+08:00\",\n+    \"version\": \"1.0\"\n+  }\n }\ndiff --git a/assets/gep/events.jsonl b/assets/gep/events.jsonl\nindex ec31e3e..9bb3661 100644\n--- a/assets/gep/events.jsonl\n+++ b/assets/gep/events.jsonl\n@@ -1,7 +1,9 @@\n-\n-{\"type\":\"ValidationReport\",\"schema_version\":\"1.5.0\",\"id\":\"vr_1770477201172\",\"gene_id\":\"gene_gep_innovate_from_opportunity\",\"env_fingerprint\":{\"node_version\":\"v22.22.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"os_release\":\"6.1.0-42-cloud-amd64\",\"evolver_version\":\"1.7.0\",\"cwd\":\"/home/crishaocredits/.openclaw/workspace\",\"captured_at\":\"2026-02-07T15:13:21.123Z\"},\"env_fingerprint_key\":\"b98472b2ef785976\",\"commands\":[{\"command\":\"node -e \\\"require('./src/evolve'); require('./src/gep/solidify'); console.log('ok')\\\"\",\"ok\":true,\"stdout\":\"ok\\n\",\"stderr\":\"\"}],\"overall_ok\":true,\"duration_ms\":49,\"created_at\":\"2026-02-07T15:13:21.173Z\",\"asset_id\":\"sha256:94362b47428c75ed92e6721259500c1e548177d6989b5fae7524910c92109b95\"}\n-{\"type\":\"EvolutionEvent\",\"schema_version\":\"1.5.0\",\"id\":\"evt_1770477201173\",\"parent\":\"evt_1770476523037\",\"intent\":\"innovate\",\"signals\":[\"user_missing\",\"user_feature_request\"],\"genes_used\":[\"gene_gep_innovate_from_opportunity\"],\"mutation_id\":\"mut_1770476534173\",\"personality_state\":{\"type\":\"PersonalityState\",\"rigor\":0.7,\"creativity\":0.35,\"verbosity\":0.25,\"risk_tolerance\":0.4,\"obedience\":0.9},\"blast_radius\":{\"files\":1,\"lines\":2},\"outcome\":{\"status\":\"failed\",\"score\":0.2},\"capsule_id\":null,\"env_fingerprint\":{\"node_version\":\"v22.22.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"os_release\":\"6.1.0-42-cloud-amd64\",\"evolver_version\":\"1.7.0\",\"cwd\":\"/home/crishaocredits/.openclaw/workspace\",\"captured_at\":\"2026-02-07T15:13:21.123Z\"},\"validation_report_id\":\"vr_1770477201172\",\"meta\":{\"at\":\"2026-02-07T15:13:21.173Z\",\"signal_key\":\"user_feature_request|user_missing\",\"selector\":{\"selected\":\"gene_gep_innovate_from_opportunity\",\"reason\":[\"signals match gene.signals_match\",\"signals: user_missing, user_feature_request\",\"memory_graph: memory_prefer:gene_gep_innovate_from_opportunity | gene_prior:0.667\"],\"alternatives\":[]},\"blast_radius_estimate\":{\"files\":8,\"lines\":640},\"mutation\":{\"type\":\"Mutation\",\"id\":\"mut_1770476534173\",\"category\":\"innovate\",\"trigger_signals\":[\"user_missing\",\"user_feature_request\"],\"target\":\"gene:gene_gep_innovate_from_opportunity\",\"expected_effect\":\"explore new strategy combinations to escape local optimum\",\"risk_level\":\"medium\"},\"personality\":{\"key\":\"rigor=0.7|creativity=0.3|verbosity=0.3|risk_tolerance=0.4|obedience=0.9\",\"known\":true,\"mutations\":[]},\"gene\":{\"id\":\"gene_gep_innovate_from_opportunity\",\"created\":false,\"reason\":\"selected_gene_id_present\"},\"constraints_ok\":false,\"constraint_violations\":[\"forbidden_path touched: assets/gep/events.jsonl\"],\"validation_ok\":true,\"validation\":[{\"cmd\":\"node -e \\\"require('./src/evolve'); require('./src/gep/solidify'); console.log('ok')\\\"\",\"ok\":true}],\"validation_report\":{\"type\":\"ValidationReport\",\"schema_version\":\"1.5.0\",\"id\":\"vr_1770477201172\",\"gene_id\":\"gene_gep_innovate_from_opportunity\",\"env_fingerprint\":{\"node_version\":\"v22.22.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"os_release\":\"6.1.0-42-cloud-amd64\",\"evolver_version\":\"1.7.0\",\"cwd\":\"/home/crishaocredits/.openclaw/workspace\",\"captured_a\n... [TRUNCATED]",
+      "strategy": [
+        "Extract structured signals from logs and user instructions",
+        "Select an existing Gene by signals match (no improvisation)",
+        "Estimate blast radius (files, lines) before editing and record it",
+        "Apply smallest reversible patch",
+        "Validate using declared validation steps; rollback on failure",
+        "Solidify knowledge: append EvolutionEvent, update Gene/Capsule store"
+      ],
+      "asset_id": "sha256:47b8989be0061f53fefcd6d70c1ec259d474586cf613c573b1f5ab943c27aa86"
+    }
+  ]
+}

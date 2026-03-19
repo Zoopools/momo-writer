@@ -1,0 +1,79 @@
+{
+  "channels": {
+    "feishu-writer": {
+      "enabled": true,
+      "appId": "${OPENCLAW_FEISHU_WRITER_APP_ID}",
+      "appSecret": "${OPENCLAW_FEISHU_WRITER_APP_SECRET}",
+      "connectionMode": "websocket",
+      "domain": "feishu",
+      "groupPolicy": "open",
+      "dmPolicy": "open",
+      "allowFrom": ["*"],
+      "agentId": "writer"
+    },
+    "feishu-media": {
+      "enabled": true,
+      "appId": "${OPENCLAW_FEISHU_MEDIA_APP_ID}",
+      "appSecret": "${OPENCLAW_FEISHU_MEDIA_APP_SECRET}",
+      "connectionMode": "websocket",
+      "domain": "feishu",
+      "groupPolicy": "open",
+      "dmPolicy": "open",
+      "allowFrom": ["*"],
+      "agentId": "media"
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "bailian/qwen3.5-plus",
+        "fallbacks": [
+          "bailian/glm-4.7",
+          "bailian/MiniMax-M2.5"
+        ]
+      },
+      "workspace": "/Users/wh1ko/Documents/openclaw/agents/writer",
+      "compaction": {
+        "mode": "safeguard",
+        "reserveTokensFloor": 20000,
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 40000
+        }
+      }
+    },
+    "list": [
+      {
+        "id": "writer",
+        "name": "墨墨",
+        "workspace": "/Users/wh1ko/Documents/openclaw/agents/writer",
+        "model": {
+          "primary": "bailian/qwen3.5-plus"
+        },
+        "channels": ["feishu-writer"]
+      },
+      {
+        "id": "media",
+        "name": "小媒",
+        "workspace": "/Users/wh1ko/Documents/openclaw/agents/media",
+        "model": {
+          "primary": "bailian/glm-4.7",
+          "fallbacks": [
+            "bailian/MiniMax-M2.5"
+          ]
+        },
+        "channels": ["feishu-media"]
+      }
+    ]
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "0f41e7c8658a0a3bb1f77962dadfcc2695a05f6b51799ac3"
+    }
+  },
+  "memory": {
+    "backend": "qmd"
+  }
+}

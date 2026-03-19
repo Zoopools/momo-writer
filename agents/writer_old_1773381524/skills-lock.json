@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "skills": {
+    "baoyu-article-illustrator": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "686a9dea4d14fcb6e0917f02701ed2785437b20327852b9974814c6a2a61a6f3"
+    },
+    "baoyu-comic": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "15c05792079761bf8883d36ef2d514dca6b7917260abeb9cb0e4ca802ab33ee8"
+    },
+    "baoyu-compress-image": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "d3067338be3bf02358faa06a5dc01c3ead226b8dbaf8404edbf4c071392c8931"
+    },
+    "baoyu-cover-image": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "2167778627d3c4e28ed0a732ee4a00605ff525726612b4ad1dae3aad421b7366"
+    },
+    "baoyu-danger-gemini-web": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "ad40cb62a311faa74e38355c12b8b42358a502b4b6227eaaa31419ff1f8f8c73"
+    },
+    "baoyu-danger-x-to-markdown": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "400562fd6c17ed7c013a78d4ca6fef78aa9c4ae57107d4d77f93dad20fe7b025"
+    },
+    "baoyu-format-markdown": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "f95f85d13b4676ff099ffdc392e5cd373ba79682cf063becba26ddcc7561dcda"
+    },
+    "baoyu-image-gen": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "88057fec6cbb080c629102200b09ea25659674f1329b7cbbc2c4c419c4c0f2e9"
+    },
+    "baoyu-infographic": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "24ab30d5664e26b25c52b05a434a4a45e773f3316c5e8cff99c9e34ccbe7ae6d"
+    },
+    "baoyu-markdown-to-html": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "eb80ef9023bf838b9e0218c49c2cfaa70c39b8f7e1896665fe4ac4bc83a91f51"
+    },
+    "baoyu-post-to-wechat": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "11188eeb595e4475f2dd0e91b5f870d655e3dfa4dc366a3a723c3373ce2358ea"
+    },
+    "baoyu-post-to-weibo": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "1041e4860f3df98a3044981846882899a5e6518718745e684722c233df7ba5f0"
+    },
+    "baoyu-post-to-x": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "be86fddf0831aeb2bbe9a2581029e84420d28e6e00567d53496dc83fc94551f0"
+    },
+    "baoyu-slide-deck": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "f7e8c01fe3962737894d22730a20b1918afef73b974b839d48bbebbd6fb840bd"
+    },
+    "baoyu-translate": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "584317d386117b1c9a72fa3acc1f9ab5c318c2417a4a8e6a343adaaa7f3ca086"
+    },
+    "baoyu-url-to-markdown": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "6558a7e98d2f5f41ad9a0e621f7b1ec9d55e8cd6f487f21eeb9d7294bae24c75"
+    },
+    "baoyu-xhs-images": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "682f4765455aa018fbfb137ddd6b9797ef82b2214d523f2799015563c7e393fb"
+    },
+    "release-skills": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "fdc12f05d390047a6b47c4900e866baf25677bf7ef768cadec6abcfcdcaba7d3"
+    }
+  }
+}

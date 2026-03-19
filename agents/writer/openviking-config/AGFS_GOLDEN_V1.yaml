@@ -1,0 +1,91 @@
+# AGFS Server Configuration - GOLDEN VERSION v1.0
+# OmniPresence Agent Matrix Production Config
+# Generated: 2026-03-14 18:33 GMT+8
+# Status: ✅ VERIFIED WORKING
+
+server:
+  address: "localhost:1933"
+  log_level: "info"
+
+# Plugin configurations
+plugins:
+  # Server Info Plugin - provides server information and stats
+  serverinfofs:
+    enabled: true
+    path: "/serverinfofs"
+
+  # Memory File System - in-memory file storage (for Agent memories)
+  memfs:
+    enabled: true
+    path: "/memfs"
+
+  # Queue File System - message queue operations
+  queuefs:
+    enabled: true
+    path: "/queuefs"
+
+  # Key-Value File System - key-value store
+  kvfs:
+    enabled: true
+    path: "/kvfs"
+
+  # Stream File System - streaming file operations
+  streamfs:
+    enabled: true
+    path: "/streamfs"
+
+  # Local File System - mount local directories (for workspace)
+  # CRITICAL: local_dir must use absolute path, not env variable
+  localfs:
+    enabled: true
+    path: "/workspace"
+    config:
+      local_dir: "/Users/wh1ko/Documents/openclaw/openviking_workspace"
+      mount_path: "/workspace"
+
+  # SQL File System - SQLite database storage
+  sqlfs:
+    enabled: true
+    path: "/sqlfs"
+    config:
+      db_path: "/Users/wh1ko/.openviking/agfs.db"
+
+  # S3 File System - mount S3 buckets (disabled for now)
+  s3fs:
+    enabled: false
+    path: "/s3fs"
+
+# OmniPresence Agent Matrix specific mounts
+mounts:
+  # Agent memories
+  - source: "memfs:///agent/writer"
+    target: "/viking/agent/writer"
+    read_only: false
+  
+  - source: "memfs:///agent/media"
+    target: "/viking/agent/media"
+    read_only: false
+  
+  - source: "memfs:///agent/hunter"
+    target: "/viking/agent/hunter"
+    read_only: false
+  
+  # User memories
+  - source: "memfs:///user/memories"
+    target: "/viking/user/memories"
+    read_only: false
+  
+  # Resources
+  - source: "localfs:///workspace/resources"
+    target: "/viking/resources"
+    read_only: false
+
+# VERIFICATION CHECKLIST:
+# ✅ Server starts without error
+# ✅ All plugins mounted successfully
+# ✅ localfs mounted at /workspace
+# ✅ sqlfs mounted at /sqlfs
+# ✅ Python client connects successfully
+# ✅ Semantic search returns results
+# ✅ AGFS Server: ~/.local/bin/agfs-server
+# ✅ Version: v0.2.7-4-g20b5dab

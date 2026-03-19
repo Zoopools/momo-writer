@@ -1,0 +1,7 @@
+{
+  "platform": "bjh-work",
+  "status": "发布失败",
+  "url": "",
+  "error": "page.evaluate: SyntaxError: Failed to execute 'querySelector' on 'Document': 'button:contains(\"发布\"), button[type=\"submit\"], [class*=\"publish\"]' is not a valid selector.\n    at eval (eval at evaluate (:290:30), <anonymous>:2:26)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+  "timestamp": "2026/3/17 13:35:28"
+}

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.2",
+    "lastTouchedAt": "2026-03-05T08:22:02.707Z"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "custom-dashscope-aliyuncs-com": {
+        "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "apiKey": "${OPENCLAW_DASHSCOPE_API_KEY}",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3.5-plus",
+            "name": "qwen3.5-plus (Custom Provider)",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 16000,
+            "maxTokens": 500
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "custom-dashscope-aliyuncs-com/qwen3.5-plus"
+      },
+      "models": {
+        "custom-dashscope-aliyuncs-com/qwen3.5-plus": {
+          "alias": "qwen"
+        }
+      },
+      "workspace": "/Users/wh1ko/Documents/openclaw",
+      "memorySearch": {
+        "enabled": true
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "writer",
+        "name": "写作助手",
+        "workspace": "/Users/wh1ko/Documents/openclaw/agents/writer",
+        "model": {
+          "primary": "custom-dashscope-aliyuncs-com/qwen3.5-plus"
+        },
+        "tools": {
+          "profile": "full"
+        }
+      }
+    ]
+  },
+  "skills": {
+    "skill-creator": {
+      "enabled": true
+    },
+    "find-skills": {
+      "enabled": true
+    },
+    "social-media-marketing": {
+      "enabled": true
+    }
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "appId": "cli_a922eb10d3345bd9",
+      "appSecret": "${OPENCLAW_FEISHU_APP_SECRET}",
+      "connectionMode": "websocket",
+      "domain": "feishu",
+      "groupPolicy": "open",
+      "dmPolicy": "open",
+      "allowFrom": ["*"]
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback"
+  }
+}

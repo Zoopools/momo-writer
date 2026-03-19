@@ -1,0 +1,13 @@
+{"type": "Person", "id": "person-001", "name": "哥哥", "notes": "OpenClaw 用户，墨墨和小媒的主人", "created_at": "2026-03-10T07:20:00+08:00"}
+{"type": "Agent", "id": "agent-001", "name": "墨墨", "role": "首席协调员", "workspace": "/Users/wh1ko/Documents/openclaw/agents/writer", "created_at": "2026-03-10T07:20:00+08:00"}
+{"type": "Agent", "id": "agent-002", "name": "小媒", "role": "增长运营专家", "workspace": "/Users/wh1ko/Documents/openclaw/agents/media", "created_at": "2026-03-10T07:20:00+08:00"}
+{"type": "Project", "id": "project-001", "name": "OpenClaw 配置中心", "status": "completed", "owner": "agent-001", "created_at": "2026-03-08T00:00:00+08:00"}
+{"type": "Project", "id": "project-002", "name": "记忆系统建设", "status": "active", "owner": "agent-001", "created_at": "2026-03-06T00:00:00+08:00"}
+{"type": "Document", "id": "doc-001", "title": "MEMORY.md", "path": "/Users/wh1ko/Documents/openclaw/agents/writer/MEMORY.md", "summary": "墨墨长期记忆文件"}
+{"type": "System", "id": "system-001", "name": "QMD", "type": "向量检索系统", "status": "active", "indexed_files": 43, "vectors": 170}
+{"type": "Relation", "from": "agent-001", "to": "person-001", "type": "reports_to", "label": "墨墨向哥哥负责"}
+{"type": "Relation", "from": "agent-002", "to": "person-001", "type": "reports_to", "label": "小媒向哥哥负责"}
+{"type": "Relation", "from": "agent-002", "to": "agent-001", "type": "coordinated_by", "label": "小媒由墨墨协调"}
+{"type": "Relation", "from": "project-001", "to": "agent-001", "type": "has_owner", "label": "配置中心由墨墨负责"}
+{"type": "Relation", "from": "project-002", "to": "agent-001", "type": "has_owner", "label": "记忆系统由墨墨负责"}
+{"type": "Relation", "from": "system-001", "to": "doc-001", "type": "indexes", "label": "QMD 索引 MEMORY.md"}
