@@ -8,3 +8,15 @@ auth-profiles.json
 # 忽略 node 运行时数据
 node_modules/
 .DS_Store
+
+# --- Obsidian Sync Optimization ---
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+**/.obsidian/cache/
+**/.DS_Store
+
+# --- Obsidian Sync Optimization ---
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+**/.obsidian/cache/
+**/.DS_Store
