@@ -1,0 +1,10 @@
+auth-profiles.json
+.openclaw/state/
+.openclaw/cache/
+.openclaw/sessions/
+*.pid
+*.lock
+*.log
+# 忽略 node 运行时数据
+node_modules/
+.DS_Store
