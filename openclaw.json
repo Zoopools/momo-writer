@@ -1,0 +1,38 @@
+{
+  "meta": { "lastTouchedVersion": "2026.3.13" },
+  "models": {
+    "providers": {
+      "bailian": {
+        "baseUrl": "https://coding.dashscope.aliyuncs.com/v1",
+        "apiKey": "sk-sp-47f76e2c1b2f4e259ae46b956c09d00f",
+        "api": "openai-completions",
+        "models": [{"id":"qwen3.5-plus","name":"qwen3.5-plus"},{"id":"kimi-k2.5","name":"kimi-k2.5"}]
+      }
+    }
+  },
+  "agents": {
+    "list": [
+      { "id": "hunter", "name": "小猎", "workspace": "/Users/wh1ko/Documents/openclaw/agents/hunter", "model": { "primary": "bailian/qwen3.5-plus" } },
+      { "id": "media", "name": "小媒", "workspace": "/Users/wh1ko/Documents/openclaw/agents/media", "model": { "primary": "bailian/qwen3.5-plus" } },
+      { "id": "writer", "name": "墨墨", "workspace": "/Users/wh1ko/Documents/openclaw/agents/writer", "model": { "primary": "bailian/kimi-k2.5" } }
+    ]
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "connectionMode": "websocket",
+      "defaultAccount": "writer",
+      "accounts": {
+        "hunter": { "appId": "cli_a93bc48d75b8dbce", "appSecret": "44r9DLzKHkTAUMseTM1itbKcV5XXgFhX" },
+        "media": { "appId": "cli_a92173401c385bc0", "appSecret": "5fThCqKr3xBUwTwTUFe45cNvSvLHrRJt" },
+        "writer": { "appId": "cli_a922eb10d3345bd9", "appSecret": "b0sOppl48G7ngLip2ipbmbC56jPqIVYy" }
+      }
+    }
+  },
+  "bindings": [
+    { "type": "route", "agentId": "hunter", "match": { "channel": "feishu", "accountId": "hunter" } },
+    { "type": "route", "agentId": "media",  "match": { "channel": "feishu", "accountId": "media" } },
+    { "type": "route", "agentId": "writer", "match": { "channel": "feishu", "accountId": "writer" } }
+  ],
+  "gateway": { "port": 18789, "mode": "local" }
+}
